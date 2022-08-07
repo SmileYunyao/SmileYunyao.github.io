@@ -41,9 +41,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="YunYao" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="YunYao" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
@@ -731,6 +731,59 @@
 
     
         <style>
+  /* valine 评论框增加背景图片 */
+  #vcomments textarea {
+    /*背景图贴边*/
+    margin-top: -30px;
+    box-sizing: border-box;
+    background: url("https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp") 100% 100% no-repeat;
+}
+/*头部空白栏高度*/
+  .valine-card .card-content {
+    padding: 20px 20px 5px 20px;
+}
+/*==========修改评论框样式===========start====*/
+ .v .vwrap {
+    padding: 0 0 20px;
+}
+/*内容框高度*/
+ .v .veditor {
+    min-height: 7rem;
+    resize: none;
+}
+/*==========修改评论框样式===========end======*/
+/*===========背景图输入判断=========*/
+  #veditor:focus {
+    background-position-y: 200px;
+    transition: all 0.2s ease-in-out 0s;
+}
+/*鼠标放置头像旋转*/
+  img.vimg {
+    /* 旋转时间为 1s */
+    transition: all 1s
+}
+  img.vimg:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+/*卡片式背景*/
+  #vcomments .vcards .vcard {
+    padding: 15px 20px 0 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+    transition: all .3s
+}
+  #vcomments .vcards .vcard:hover {
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+}
+  #vcomments .vcards .vcard .vh .vcard {
+    border: none;
+    box-shadow: none;
+}
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -741,7 +794,7 @@
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+        background: url("https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -982,14 +1035,14 @@
         el: '#vcomments',
         appId: 'JkyQBgJUDCkqGkpqGXP6N4CA-gzGzoHsz',
         appKey: '95uFNXvJvVfFdei9XsjVD9D9',
-        serverURLs: 'https://JkyQBgJU.api.lncldglobal.com',
+        serverURLs: '',
         notify: 'false' === 'true',
         verify: 'false' === 'true',
-        visitor: 'true' === 'true',
-        avatar: 'mm',
+        visitor: 'false' === 'true',
+        avatar: 'monsterid',
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: '畅所欲言'
+        placeholder: 'ヾﾉ≧∀≦)o来啊！,快活啊!'
     });
 </script>
 
